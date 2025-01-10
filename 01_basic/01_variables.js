@@ -8,4 +8,4 @@ accountPassword="21212343"
 
 
 console.log([accountEmail,accountPassword])
-console.table([accountEmail,accountPassword])
+console.table([accountEmail,accountPassword]);
