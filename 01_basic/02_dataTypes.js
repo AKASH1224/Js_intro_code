@@ -14,3 +14,4 @@ console.log("name");
 // symbol -> its is unique
 // 2-
 // object ->// null -> use to store the empty data type
+// // null -> use to store the empty data type
