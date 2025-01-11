@@ -24,3 +24,18 @@ console.log(str3)
 
 const aka=null
 console.log(typeof aka)
+
+// Non Primitive data types
+const Array =["akash","mango","apple"];
+
+const myObject={
+    name:"akash",
+    age:22,   
+}
+
+const fun=function(){
+    console.log("Hello World")
+
+}
+//In js all non Primitve /reference data type are object type 
+// even in Null datat type , type is object
