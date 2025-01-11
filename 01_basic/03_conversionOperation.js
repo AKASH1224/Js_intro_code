@@ -44,6 +44,6 @@ console.log(--num); // Output: 5 (decrements before using)
 
 // javascript
 
-let num = 5;
+let num_a = 5;
 console.log(num++); // Output: 5 (uses the value first, then increments)
 console.log(num);   // Output: 6
