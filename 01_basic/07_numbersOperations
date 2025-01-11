@@ -1,0 +1,32 @@
+const otherNumber= 123.8966
+console.log(otherNumber.toPrecision(4));
+const hundreds =10000000
+console.log(hundreds.toLocaleString())
+console.log(hundreds.toLocaleString('en-IN'))
+
+// +++++++++++++++++++++++++++++++++++Maths++++++++++++++++++++++++++++++++++++++++
+
+console.log(Math);
+// console.log(Math.abs(-4));
+ // Convert the nefgative into positive
+// console.log(Math.round(4.6));
+ // convert the numbers into round figyre
+// console.log(Math.ceil(5.3));
+// convert the decimal value into top tier, e.g-> 4.3-> 5,4.2->5
+// console.log(Math.min(4,3,6,1,2));
+// console.log(Math.max(4,3,6,1,2));
+
+// console.log(Math.random());
+// it gives the value bw 0 to 01
+
+console.log(Math.random()*10+1);
+// it gives the value form 10th place and minimum value will be 1
+console.log(Math.floor(Math.random()*10));
+
+//  console.log(Math.floor(Math.random()*10)+1);
+// Math floor  rounds a number to nearest integesr digit, e.g-> 4.9=5, 4.1=4
+const min=10;
+const max=20;
+
+
+console.log(Math.floor(Math.random()*(max-min +1))+min);
