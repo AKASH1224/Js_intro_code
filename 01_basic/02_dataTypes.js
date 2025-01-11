@@ -15,3 +15,9 @@ console.log("name");
 // 2-
 // object ->// null -> use to store the empty data type
 // // null -> use to store the empty data type
+
+// ***************************************Operation **********************************************
+str1="akash"
+str2="deep"
+str3=str1+str2
+console.log(str3)
