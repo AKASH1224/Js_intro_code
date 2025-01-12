@@ -1,6 +1,6 @@
 // Dates
 // date is object
-let myDate= new Date()
+// let myDate= new Date()
 // console.log(myDate.toString());
 // console.log(myDate.toISOString());
 // console.log(myDate.toLocaleDateString());
@@ -14,12 +14,11 @@ let myTimeStamp =Date.now();
  
 // console.log(Math.floor(Date.now()/1000));
 //this  date Now giv esd the current millisecond  and we had divivded it by 1000 and using floor to get the nearest round off
+let newDate = new Date(); // Creates a new Date object
 
-let newDate =new Date()
-console.log(newDate);
-console.log(newDate.getDay());
-console.log(newDate.getMonth()+ 1);
+// Call toLocaleString and store the result in a variable
+let weekday = newDate.toLocaleString('default', {
+    weekday: "long",
+});
 
-newDate.toLocaleString('default',{
-    weekday:"long",
-})
+console.log(weekday); // Now logs the name of the weekday
