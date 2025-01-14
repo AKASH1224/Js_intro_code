@@ -25,5 +25,6 @@ function loginUserMessage(username){
     return `${username} just logged in`
 }
 // console.log(loginUserMessage("AKash deep"));
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
 //when we return the empty argument to the function, it gives the undefined message
+
