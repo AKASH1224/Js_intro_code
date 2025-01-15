@@ -23,3 +23,10 @@ handleObject({
  username:"Akash Deep",
  price:10   
 })
+
+const arr=[100,200,300,400,500]
+
+function arrObj(getArr) {
+    return getArr[1]
+}
+console.log(arrObj(arr));
