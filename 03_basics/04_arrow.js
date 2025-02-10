@@ -33,3 +33,10 @@ console.log(addTwo(10,5))
 
 const addTwo = (num1 ,num2 ) => ({username:"Akash"})
 console.log(addTwo(10,6))
+ 
+
+const chai = ()=>{
+    let Name='Akash deep'
+    console.log(this)
+}
+chai()

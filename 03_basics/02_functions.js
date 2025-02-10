@@ -4,11 +4,13 @@ function calculateCartPrice(...num1){
     return num1
 }
 console.log(calculateCartPrice(200,3000,400,500))
+
+
 // here the val1, val2 store the 200,3000 and rest of value are saved in (...) operator
 function calculateCartPrice(val1,val2,...num1){
     return num1
 }
-console.log(calculateCartPrice(200,3000,400,500))
+// console.log(calculateCartPrice(200,3000,400,500))
 
 const  user={
     username :"Akash",
