@@ -21,14 +21,40 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and the price is ${anyobject.price}`);
 }
 // handleObject(user)   //passing the objcet
-handleObject({
- username:"Akash Deep",
- price:10   
-})
-
+// handleObject({
+//  username:"Akash Deep",
+//  price:10   
+// })
+// 
+// 
+/*
 const arr=[100,200,300,400,500]
 
 function arrObj(getArr) {
     return getArr[1]
 }
-console.log(arrObj(arr));
+console.log(arrObj(arr));*/
+
+// add is higher order function bcause it is taking the other function as argument
+function add(a,b,cb){
+    const result=a+b
+    cb(result)
+}
+
+function showResult(val){
+    console.log(val);
+}
+
+add(2,4,showResult);
+
+
+// function mul(a,b,ml){
+//     const result=a*b
+//     ml(result)
+// }
+
+// mul(2,10,(val)=>console.log(val))
+
+
+
+

@@ -6,12 +6,27 @@
     <title>Document-c</title>
 </head>
 <body>
-    <body style="background-color: blue;color: white;"></body>
+    <body style="background-color: blue;color: white;">
+        <h1>dsajskfdl;jasdf</h1>
+        <h1>dsajskfdl;jasdf</h1>
+        <h1>dsajskfdl;jasdf</h1>
+    
+    
+    </body>
 </body>
 <script>
     document.createElement('.div')
     const div= document.createElement('div')
+    console.log(div);
+    div.className ="main"
+    div.id=Math.round(Math.round()*10+1) 
+   div.setAttribute("title","generated title")
+    div.style.backgroundColor="green"
+    //div.style.padding="12px"
     console.log(div)
-    div.className="main"
+    const addText =document.createTextNode("chai aur code")
+    div.appendChild(addText)
+    
+    
 </script>    
 </html>
