@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Events</title>
+</head>
+<body style="background-color: grey;">
+    <div>
+    <ul id ='images'>
+        <li><img width="200px" id="horse" src="https://images.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg?auto=compress&cs=tinysrgb&w=600"></li>
+        
+        <li><img width="200px" id="eagle" src="https://images.pexels.com/photos/53581/bald-eagles-bald-eagle-bird-of-prey-adler-53581.jpeg?auto=compress&cs=tinysrgb&w=600/"></li>
+        
+        
+        <li><img width="200px" id="tiger" src="https://images.pexels.com/photos/162203/panthera-tigris-altaica-tiger-siberian-amurtiger-162203.jpeg?auto=compress&cs=tinysrgb&w=600"></li>
+        
+        
+        <li><img width="200px" id="drink" src="https://images.pexels.com/photos/27367751/pexels-photo-27367751/free-photo-of-a-glass-of-mojito-with-mint-leaves-on-top.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"></li>
+
+        
+        <li><img width="200px" id="seen" src="https://images.pexels.com/photos/30325588/pexels-photo-30325588/free-photo-of-black-and-white-mountain-landscape-in-winter.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"></li>
+    </ul>    
+    
+    </div>
+    
+</body>
+<script>
+// document.getElementById('images').addEventListener("click",function(e){
+//     console.log("image is clicked")
+// },false)
+// // event propogation, when we click the egle image inside the ul img, then it works like form innner to outer ta
+// document.getElementById('eagle').addEventListener("click",function(e){
+// console.log('eagle is clicked')
+//  e.stopPropagation() //propagation means working from inner to outer side
+// },false)
+document.querySelector("#images").addEventListener("click",function(e){
+    console.log(e.target.parentNode);
+    // if(e.target.parentNode ==='IMG'){
+    //  console.log(e.target.id);
+     
+    // let removeIt =e.target.parentNode
+    // removeIt.remove()
+    // }
+
+    let removeIt =e.target.parentNode
+    removeIt.remove()
+})
+</script>
+</html>
