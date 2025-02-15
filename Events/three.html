@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    const namDate=function(){
+        console.log("Akash")
+    }
+    let start;
+    document.querySelector("#Start").addEventListener("click",function(){
+    start=setInterval(namDate,1000)
+    })
+    
+    
+    document.querySelector("#Stop").addEventListener("click",function(){
+        clearInterval(start)
+        start=null;        
+    })
+</script>
+</html>
