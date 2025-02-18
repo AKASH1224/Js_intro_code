@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Movie Recommendation</h1>
+        <div class="search-container">
+            <input type="text" id="movie-search" placeholder="Search for a movie...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
     
+    <section class="filter">
+        <div class="filter-section">
+            <button class="filter-btn" data-genre="action">Action</button>
+            <button class="filter-btn" data-genre="horror">Horror</button>
+            <button class="filter-btn" data-genre="comedy">Comedy</button>
+            <button class="filter-btn" data-genre="romance">Romance</button>
+            <button class="filter-btn" data-genre="drama">Drama</button>
+        </div>
+    </section>
+    
+    <section id="movie-list">
+        <!-- Movies will be displayed here -->
+    </section>
+
+    <footer>
+        <p>© 2025 Movie Recommendation App</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
