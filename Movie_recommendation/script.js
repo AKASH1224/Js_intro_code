@@ -19,17 +19,25 @@ filterButtons.forEach(button => {
     });
 });
 
+let currentPage = 1;
+let totalResults = [];
+const moviesPerPage = 6; // Show 6 movies per page
+
 async function fetchMovies(query) {
     try {
         const url = `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`;
-        console.log("Request URL: ", url);  // Log the request URL
+       
         const response = await fetch(url);
         const data = await response.json();  // Parse the response
 
         console.log("API Response:", data);  // Log the response data to check what you're receiving
 
         if (data.Response === "True") {
-            renderMovies(data.Search);  // Render if data is valid
+            totalResults =data.Search;
+            currentPage=1;
+            renderMovies(getMoviesForPage(currentPage)); 
+            updatePaginationButtons();
+
         } else {
             alert("No movies found.");
         }
@@ -38,6 +46,14 @@ async function fetchMovies(query) {
         alert("An error occurred while fetching movies.");
     }
 }
+
+
+function getMoviesForPage(page) {
+    const start = (page - 1) * moviesPerPage;
+    const end = start + moviesPerPage;
+    return totalResults.slice(start, end);
+}
+    
 
 function renderMovies(movies) {
     movieList.innerHTML = ''; // Clears previous movie list
@@ -89,4 +105,29 @@ async function fetchMoviesByGenre(genre) {
     } catch (error) {
         console.log("Error Fetching movies by genre", error);
     }
+}
+// Pagination Button
+const  prevButton =document.getElementById("prev")
+const  NextButton =document.getElementById("next")
+
+prevButton.addEventListener("click",function(){
+    if(currentPage>1){
+     currentPage --;
+     renderMovies(getMoviesForPage(currentPage))
+      updatePaginationButtons();    
+    }
+})
+
+NextButton.addEventListener('click',function() {
+    if (currentPage*moviesPerPage<totalResults.length) {
+        currentPage ++;
+        renderMovies(getMoviesForPage(currentPage))
+        updatePaginationButtons();
+        
+    }
+})
+
+function updatePaginationButtons(){
+    prevButton.disabled=currentPage === 1;
+    NextButton.disabled= currentPage *moviesPerPage >= totalResults.length
 }
